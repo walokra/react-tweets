@@ -11,8 +11,9 @@ Code repository for the tutorial by @kenwheeler: [Build A Real-Time Twitter Stre
 1. Clone the repo: `git clone git@github.com:scotch-io/react-tweets`
 2. Go into folder: `cd react-tweets`
 3. Install dependencies: `npm install`
-4. Create local MongoDB database called **react-tweets** (configured in `server.js`)
+4. Create local MongoDB database called **react-tweets** (configured in `server.js`). You can also create directory `data` and run `mongod --dbpath data` from the commandline.
 5. Replace credentials for Twitter API (configured in `config.js`)
-6. Start the app: `node server.js`
-7. View in browser at: `http://localhost:8080`
-8. Tweet away!
+6. Run browserify: `npm run browserify`
+7. Start the app: `node server`
+8. View in browser at: `http://localhost:8080`
+9. Tweet away!

@@ -1,5 +1,6 @@
 var JSX = require('node-jsx').install(),
   React = require('react'),
+  ReactDOMServer = require('react-dom/server'),
   TweetsApp = React.createFactory(require('./components/TweetsApp.react')),
   Tweet = require('./models/Tweet');
 
@@ -10,7 +11,7 @@ module.exports = {
     Tweet.getTweets(0,0, function(tweets, pages) {
 
       // Render React to a string, passing in our fetched tweets
-      var markup = React.renderToString(
+      var markup = ReactDOMServer.renderToString(
         TweetsApp({
           tweets: tweets
         })
@@ -35,4 +36,4 @@ module.exports = {
     });
   }
 
-}
+};
